@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,7 +13,48 @@
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/canvasFragmentView"
+        android:layout_width="match_parent"
+        android:layout_height="610dp" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/expandedToolbarFragmentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/colorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="center|bottom"
+            android:text="Color" />
+        <Button
+            android:id="@+id/sizeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="center|bottom"
+            android:text="Size" />
+        <Button
+            android:id="@+id/toolButton"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="center|bottom"
+            android:text="Pen" />
+        <Button
+            android:id="@+id/fileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="center|bottom"
+            android:text="File" />
+    </LinearLayout>
+
+</LinearLayout>
