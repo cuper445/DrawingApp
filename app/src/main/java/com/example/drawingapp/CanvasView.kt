@@ -7,7 +7,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
 
-class canvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
+class CanvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     //Define local variables
     private var bitmap: Bitmap? = null
     private var mainCanvas: Canvas? = null
