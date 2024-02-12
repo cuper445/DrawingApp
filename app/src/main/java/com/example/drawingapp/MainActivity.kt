@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbarSizeFragment = Toolbar
-        val toolbarColorFragment = idk
-        val toolbarToolFragment = idk
-        val toolbarFileFragment = idk
+        val toolbarSizeFragment = ToolbarSizeFragment()
+        val toolbarColorFragment = ToolbarColorFragment()
+        val toolbarToolFragment = ToolbarToolFragment()
+        val toolbarFileFragment = ToolbarFileFragment()
 
         binding.colorButton.setOnClickListener{
             val fTrans = supportFragmentManager.beginTransaction()
@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
             fTrans.addToBackStack(null)
             fTrans.commit()
         }
+
+        setContentView(binding.root)
 
     }
 

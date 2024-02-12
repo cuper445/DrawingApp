@@ -6,5 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.drawingapp.databinding.ToolbarColorBinding
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModel
+
 class ToolbarColorFragment: Fragment() {
+   private val binding: ToolbarColorBinding by lazy{ToolbarColorBinding.inflate((layoutInflater))}
+    private val myViewModel : ViewModel by activityViewModels()
+    private var clickCallback : () -> Unit = {}
+
+    override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+        return binding.root
+    }
+
 }
