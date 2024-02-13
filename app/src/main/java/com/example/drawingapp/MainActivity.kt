@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 class MainActivity : AppCompatActivity() {
 
     private val binding : ActivityMainBinding by lazy{ActivityMainBinding.inflate(layoutInflater)}
-    private val myViewModel : ViewModel by viewModels()
+    private val myViewModel : DrawViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

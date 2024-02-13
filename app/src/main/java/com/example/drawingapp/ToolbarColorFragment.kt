@@ -12,7 +12,7 @@ import com.github.dhaval2404.colorpicker.model.ColorShape
 
 class ToolbarColorFragment: Fragment() {
    private val binding: ToolbarColorBinding by lazy{ToolbarColorBinding.inflate((layoutInflater))}
-    private val myViewModel : ViewModel by activityViewModels()
+    private val myViewModel : DrawViewModel by activityViewModels()
     private var clickCallback : () -> Unit = {}
 
     private var defaultColor = 0
@@ -25,7 +25,8 @@ class ToolbarColorFragment: Fragment() {
             .setColorShape(ColorShape.CIRCLE)
             .setDefaultColor(defaultColor)
             .setColorListener { color, colorHex ->
-                //Handle Color Selection
+                //Set tool color
+                myViewModel.setToolColor(color)
             }
             .show()
 
