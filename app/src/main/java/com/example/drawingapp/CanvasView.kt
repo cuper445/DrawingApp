@@ -30,9 +30,6 @@ class CanvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
         mainCanvas = Canvas() //Should be stored in a class that has a longer lifecycle in the future
         paintCanvas = Canvas(bitmap!!)
 
-        //Fill bitmap with red to test
-        mainCanvas?.drawARGB(255, 255, 0, 0)
-
         //Set the brush properties
         brush.isAntiAlias = true
         brush.isDither = true
