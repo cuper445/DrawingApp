@@ -53,4 +53,7 @@ dependencies {
     implementation("androidx.fragment:fragment:1.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    //Additional dependencies
+    implementation("com.github.Dhaval2404:ColorPicker:2.3")
 }
