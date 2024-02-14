@@ -22,6 +22,12 @@ class MainActivity : AppCompatActivity() {
         val toolbarToolFragment = ToolbarToolFragment()
         val toolbarFileFragment = ToolbarFileFragment()
 
+        //Create canvas
+        val canvasFragment = CanvasFragment()
+        val fTrans = supportFragmentManager.beginTransaction()
+        fTrans.add(R.id.canvasFragmentView, canvasFragment)
+        fTrans.commit()
+
         binding.colorButton.setOnClickListener{
             val fTrans = supportFragmentManager.beginTransaction()
             fTrans.replace(R.id.expandedToolbarFragmentView, toolbarColorFragment)

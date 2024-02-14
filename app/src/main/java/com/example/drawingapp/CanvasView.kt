@@ -30,6 +30,14 @@ class CanvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
         mainCanvas = Canvas() //Should be stored in a class that has a longer lifecycle in the future
         paintCanvas = Canvas(bitmap!!)
 
+        //Draw border around the canvas
+        //Maybe remove this later
+        val border = Paint()
+        border.color = -0x1000000
+        border.style = Paint.Style.STROKE
+        border.strokeWidth = 5f
+        paintCanvas?.drawRect(1f, 1f, 1023f, 1023f, border)
+
         //Set the brush properties
         brush.isAntiAlias = true
         brush.isDither = true
