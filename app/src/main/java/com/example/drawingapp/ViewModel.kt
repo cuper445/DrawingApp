@@ -6,11 +6,19 @@ import androidx.lifecycle.ViewModel
 import android.graphics.Color
 
 class DrawViewModel: ViewModel() {
-    private var toolSize = 5
-    private var toolColor = Color.argb(255, 255, 0, 0)
-    private var toolShape = "PEN"
+    var toolSize : MutableLiveData<Float> = MutableLiveData(5f)
+    var toolColor : MutableLiveData<Int> = MutableLiveData(Color.BLACK)
+    var toolShape : MutableLiveData<String> = MutableLiveData("PEN")
 
     fun setToolColor(color: Int) {
-        toolColor = color
+        toolColor.value = color
+    }
+
+    fun setToolSize(size: Float) {
+        toolSize.value = size
+    }
+
+    fun setToolShape(shape: String) {
+        toolShape.value = shape
     }
 }
