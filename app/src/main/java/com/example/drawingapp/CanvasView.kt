@@ -10,10 +10,10 @@ import android.view.View
 
 class CanvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     //Define local variables
-    private var bitmap: Bitmap? = null
-    private var mainCanvas: Canvas? = null
-    private var paintCanvas: Canvas? = null
-    private var brush: Paint = Paint()
+    var bitmap: Bitmap? = null
+    var mainCanvas: Canvas? = null
+    var paintCanvas: Canvas? = null
+    var brush: Paint = Paint()
 
     //Tool properties
     var toolSize: Float = 5f
@@ -21,8 +21,8 @@ class CanvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     var toolShape: String = "PEN"
 
     //Position properties
-    private var lastX: Float = 0f
-    private var lastY: Float = 0f
+    var lastX: Float = 0f
+    var lastY: Float = 0f
 
     //Initialize the canvas
     init {
