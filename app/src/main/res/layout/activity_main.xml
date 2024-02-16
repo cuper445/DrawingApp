@@ -20,7 +20,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/canvasFragmentView"
         android:layout_width="match_parent"
-        android:layout_height="533dp" />
+        android:layout_height="382dp" />
 
     <TextView
         android:layout_width="match_parent"
