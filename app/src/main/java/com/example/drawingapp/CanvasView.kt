@@ -3,6 +3,7 @@ package com.example.drawingapp
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -65,6 +66,25 @@ class CanvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
                 brush.strokeCap = Paint.Cap.ROUND
             }
         }
+
+        when(toolShape)
+        {
+            "PAINTBRUSH" -> {
+                brush.strokeCap = Paint.Cap.SQUARE
+            }
+        }
+
+        //Eraser to use on a white canvas
+        when(toolShape)
+        {
+            "ERASER" -> {
+                brush.color = Color.WHITE
+                brush.strokeJoin = Paint.Join.ROUND
+                brush.strokeCap = Paint.Cap.ROUND
+
+            }
+        }
+
     }
 
     //Function to draw on the canvas

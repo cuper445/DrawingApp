@@ -11,8 +11,6 @@ import com.example.drawingapp.databinding.ToolbarSizeBinding
 
 
 class ToolbarSizeFragment:Fragment() {
-    //create canvas view object
-    private lateinit var canvasView: CanvasView
     private lateinit var binding: ToolbarSizeBinding
     private val myViewModel : DrawViewModel by activityViewModels()
 

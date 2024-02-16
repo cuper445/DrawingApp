@@ -61,12 +61,12 @@
             android:layout_height="64dp"
             android:layout_gravity="center|bottom"
             android:text="Pen" />
-        <Button
-            android:id="@+id/fileButton"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_gravity="center|bottom"
-            android:text="File" />
+<!--        <Button-->
+<!--            android:id="@+id/fileButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:layout_gravity="center|bottom"-->
+<!--            android:text="File" />-->
     </LinearLayout>
 
 </LinearLayout>
