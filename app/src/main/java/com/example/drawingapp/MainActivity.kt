@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         fTrans.add(R.id.canvasFragmentView, canvasFragment)
         fTrans.commit()
 
-        binding.colorButton.setOnClickListener{
+        binding.colorButton?.setOnClickListener{
 //            val fTrans = supportFragmentManager.beginTransaction()
 //            fTrans.replace(R.id.expandedToolbarFragmentView, toolbarColorFragment)
 //            fTrans.addToBackStack(null)
@@ -53,6 +53,13 @@ class MainActivity : AppCompatActivity() {
                     myViewModel.setToolColor(color)
                 }
                 .show()
+        }
+        binding.landscapeColorButton?.setOnClickListener{
+            val fTrans = supportFragmentManager.beginTransaction()
+            fTrans.replace(R.id.expandedToolbarFragmentView, toolbarColorFragment)
+            fTrans.addToBackStack(null)
+            fTrans.commit()
+
         }
         binding.toolButton.setOnClickListener{
             val fTrans = supportFragmentManager.beginTransaction()
