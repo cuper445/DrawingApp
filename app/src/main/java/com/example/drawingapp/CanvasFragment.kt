@@ -1,5 +1,6 @@
 package com.example.drawingapp
 
+import android.graphics.Canvas
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -29,6 +30,12 @@ class CanvasFragment : Fragment(R.layout.canvas) {
         myViewModel.toolShape.observe(viewLifecycleOwner) {
             canvasView.toolShape = it
             canvasView.updateBrush()
+        }
+
+        //Observe bitmap
+        myViewModel.bitmap.observe(viewLifecycleOwner) {
+            canvasView.bitmap = it
+            canvasView.paintCanvas = Canvas(it)
         }
     }
 

@@ -9,7 +9,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 
-class CanvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
+class CanvasView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
     //Define local variables
     var bitmap: Bitmap? = null
     var mainCanvas: Canvas? = null
@@ -27,10 +27,6 @@ class CanvasView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
     //Initialize the canvas
     init {
-        bitmap = Bitmap.createBitmap(1024, 1024, Bitmap.Config.ARGB_8888) //Should be taken from database in the future
-        mainCanvas = Canvas() //Should be stored in a class that has a longer lifecycle in the future
-        paintCanvas = Canvas(bitmap!!)
-
         //Draw border around the canvas
         //Maybe remove this later
         val border = Paint()
